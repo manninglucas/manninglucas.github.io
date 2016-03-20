@@ -54,16 +54,20 @@ function animate(dt) {
         draw();
         update();
         
-        window.requestAnimationFrame(animate);
+        raf = window.requestAnimationFrame(animate);
     }, 1000 / 60);
 }
 
 function init() {  
+    stars = []
+    if (raf) {
+        window.cancelAnimationFrame(raf);
+    }
     for (let i = 0; i < 500; ++i) {
         let s = new Star(canvas.width,canvas.height, ctx, 20);
         stars.push(s);
     }    
-    window.requestAnimationFrame(animate);  
+    raf = window.requestAnimationFrame(animate);  
 }
 
 function resizeCanvas() {
@@ -71,7 +75,7 @@ function resizeCanvas() {
     canvas.height = window.innerHeight;
     init();
 }
-
+let raf;
 let canvas = document.getElementById('spacefield');
 let ctx = canvas.getContext('2d');
 let stars = [];
