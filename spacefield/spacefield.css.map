@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,CAAE;EAAE,MAAM,EAAE,CAAC;EAAE,OAAO,EAAE,CAAC;;AAEzB,UAAW;EACP,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;;AAIhB,MAAO;EACH,MAAM,EAAE,eAAe;EACvB,OAAO,EAAE,KAAK",
-"sources": ["spacefield.scss"],
-"names": [],
-"file": "spacefield.css"
-}

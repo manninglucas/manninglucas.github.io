@@ -1,0 +1,45 @@
+.counties {
+  stroke: #ccc;
+  fill: none;
+}
+
+.msa {
+  stroke: #bbb;
+  fill: none;
+  pointer-events: all;
+
+}
+
+.states {
+    stroke-width: 3px;
+    stroke: #000;
+    fill: none;
+}
+.msa-boundary {
+    stroke-width: 1px;
+}
+
+.msa-boundary:hover {
+    fill-opacity: 0.5;
+}
+
+.tip {   
+  position: absolute;           
+  text-align: center;           
+  width: 160px;                  
+  height: 60px;                 
+  padding: 2px;             
+  font: 12px;        
+  background: white;   
+  border: 0px;      
+  pointer-events: none;         
+  display: block;
+  border: 2px solid gray;
+  visibility: hidden;
+}
+
+.separator {
+  min-height: 1px;
+  border: 1px solid lightgray;
+  max-width: 75%;
+}
