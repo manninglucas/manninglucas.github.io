@@ -316,23 +316,23 @@ function createBoundaries(us, msa) {
 d3.queue()
   .defer(d3.json, "https://d3js.org/us-10m.v1.json")
   .defer(d3.json, "./data/us_msa.json")
-  .defer(d3.csv, "./data/opportunity.csv", 
+  .defer(d3.csv, "./disruption-map/data/opportunity.csv", 
       function (d) { 
         maps.OPPORTUNITY.addData(d.area, {"value" : d.opportunity, "greatest_sector" : d.greatest_sector});
         oppDict[d.area] = d.opp;
         employed[d.area] = d.totalEmployed;
       })
-  .defer(d3.csv, "./data/disruption.csv", 
+  .defer(d3.csv, "./disruption-map/data/disruption.csv", 
       function (d) { 
         maps.DISRUPTION.addData(d.area, {"value" : d.disruption, "greatest_sector" : d.greatest_sector});
         disruptDict[d.area] = d.dis;
         employed[d.area] = d.totalEmployed;
       })
-  .defer(d3.csv, "./data/combined.csv",
+  .defer(d3.csv, "./disruption-map/data/combined.csv",
       function (d) { 
         maps.COMBINED.addData(d.area, {"value" : d.combined, "greatest_sector" : d.greatest_sector});
       })
-   .defer(d3.csv, "./data/proj.csv",
+   .defer(d3.csv, "./disruption-map/data/proj.csv",
       function (d) { 
        
         for (job in d){
@@ -349,7 +349,7 @@ d3.queue()
    //    function (d) { 
    //      maps.PROJ.addData(d.area, {"value" : d.combined, "greatest_sector" : d.greatest_sector});
    //    })
-  .defer(d3.csv, "./data/job_employments.csv",
+  .defer(d3.csv, "./disruption-map/data/job_employments.csv",
       function (d) { 
         for (job in d){
             if (!(job in maps.OCCUPATION)){ 
