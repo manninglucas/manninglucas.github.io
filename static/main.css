@@ -1,0 +1,21 @@
+ #title {
+    font-size: 2em;
+    white-space: nowrap;
+    display: inline-block;
+    color: white;
+ }
+
+ body {
+   background-color: black;
+   font-family: 'Quicksand', sans-serif;
+ }
+
+ ul {
+   list-style: none;
+
+   color: white;
+ }
+
+ a {
+   color: white;
+ }
