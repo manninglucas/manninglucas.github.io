@@ -1,10 +1,11 @@
-let titleElem = document.getElementById("title");
+let titleElem = document.getElementById("title-image");
 let rect = titleElem.getBoundingClientRect();
 let x = 0;
 let y = 0;
 let dx = 0.3;
 let dy = 0.3;
 let previousTimeStamp = 0;
+let id = 0;
 
 function step(timestamp) {
     const timestep = timestamp - previousTimeStamp;
@@ -56,8 +57,10 @@ function setFilter(val) {
 }
 
 
-let id = window.requestAnimationFrame(step);
 window.addEventListener("resize", (e) => {
     reset();
 })
 
+document.addEventListener("DOMContentLoaded", () => {
+    reset();
+})
