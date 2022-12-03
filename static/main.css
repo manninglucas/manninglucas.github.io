@@ -1,8 +1,12 @@
  #title {
-    font-size: 2em;
+    width: 50%;
     white-space: nowrap;
     display: inline-block;
-    color: white;
+    filter: grayscale(100%) brightness(1000%);
+ }
+
+ img {
+  width: 100%;
  }
 
  body {
@@ -12,10 +16,29 @@
 
  ul {
    list-style: none;
-
    color: white;
+   font-size: 2rem;
  }
 
- a {
+a {
    color: white;
+   text-decoration: none;
  }
+
+ .links {
+  width: 50%;
+ }
+
+ @media (min-width: 1200px) {
+  ul {
+    font-size: 1rem;
+  }
+  .links {
+    width: 17%;
+  }
+  #title {
+    width: 17%;
+  }
+}
+
+ 
