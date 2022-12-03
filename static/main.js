@@ -24,6 +24,8 @@ function step(timestamp) {
         }
         setTransform(`translate(${x}px, ${y}px)`);
     }
+    titleElem.style.display = 'none';
+    titleElem.style.display = 'block';
 
     previousTimeStamp = timestamp;
     window.requestAnimationFrame(step);
